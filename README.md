@@ -5,7 +5,9 @@ Thank you very much for your interest in our work! This repository contains the 
 ## 1. Project Overview
 
 As illustrated in the framework, MMDiffuzzy consists of three core components:
-
+* Latent Diffusion Module progressively refines multimodal representations through a time-dependent denoising process.
+* Dynamic Fuzzy Memory Particle (DFMP) Module constructs evolving fuzzy memory particles to model structured cross-modal uncertainty.
+* Fuzzy Memory Guidance (FMG) Module injects step-aware fuzzy memory into the diffusion backbone via cross-attention mechanisms for survival risk prediction.
 
 ## 2. Repository Structure
 
