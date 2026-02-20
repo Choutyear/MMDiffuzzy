@@ -26,11 +26,11 @@ This version reflects the exact research implementation used in the experiments 
 
 ## 3. Environment Setup
 
-Install dependencies:
+You can install the environment with the following code:
 
-```python
-pip install -r requirements.txt
-```
+```conda env create -f environment.yaml```
+
+[environment.yaml](https://github.com/Choutyear/FMDNN/blob/main/Files/encironment.yaml)
 
 
 ## 4. Dataset Preparation
