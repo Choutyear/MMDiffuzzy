@@ -115,7 +115,7 @@ Due to the strict page limitation (35 pages) imposed by the journal, only the co
 Several important observations can be made:
 
 1. **Effectiveness of diffusion refinement**  
-   The proposed MMDiffuzzy consistently improves as the number of diffusion steps increases, demonstrating the effectiveness of iterative diffusion-based multimodal refinement. The performance gain is especially significant from small to moderate steps (e.g., \(T=10 \rightarrow 50\)), while gradually saturating at larger steps (\(T=100 \rightarrow 200\)).
+   The proposed MMDiffuzzy consistently improves as the number of diffusion steps increases, demonstrating the effectiveness of iterative diffusion-based multimodal refinement. The performance gain is especially significant from small to moderate steps, while gradually saturating at larger steps.
 
 2. **Necessity of the diffusion backbone**  
    The variant without diffusion (w/o Diffu) exhibits only marginal improvements as steps increase, indicating that simply increasing computation or repeated forwarding cannot reproduce the benefits brought by diffusion refinement. This supports our claim that the performance gains mainly arise from the structured diffusion process rather than additional computation alone.
