@@ -86,6 +86,8 @@ These improvements are structural in nature and do not affect algorithmic correc
 
 
 ## 7. 
+Due to the strict page limitation (35 pages) imposed by the journal, only the compact numerical summary is included in the manuscript. For completeness and reproducibility, we provide the detailed diffusion-step analysis and additional experimental results in this repository.
+
 
 
 ## Diffusion Step Analysis (Expand from Table 4)
@@ -110,7 +112,19 @@ These improvements are structural in nature and do not affect algorithmic correc
 |               | c-index  | 0.741 | 0.785 | 0.838 | 0.844 | 0.851 |
 
 
+Several important observations can be made:
 
+1. **Effectiveness of diffusion refinement**  
+   The proposed MMDiffuzzy consistently improves as the number of diffusion steps increases, demonstrating the effectiveness of iterative diffusion-based multimodal refinement. The performance gain is especially significant from small to moderate steps (e.g., \(T=10 \rightarrow 50\)), while gradually saturating at larger steps (\(T=100 \rightarrow 200\)).
+
+2. **Necessity of the diffusion backbone**  
+   The variant without diffusion (“w/o Diffu”) exhibits only marginal improvements as steps increase, indicating that simply increasing computation or repeated forwarding cannot reproduce the benefits brought by diffusion refinement. This supports our claim that the performance gains mainly arise from the structured diffusion process rather than additional computation alone.
+
+3. **Complementary role of fuzzy modeling**  
+   Removing fuzzy modeling (“w/o Fuzzy”) leads to a substantial performance degradation across all diffusion steps, particularly in c-index, suggesting that fuzzy-guided uncertainty modeling is critical for stable multimodal alignment and survival prediction.
+
+4. **Behavior of conventional fusion variants**  
+   Traditional multimodal fusion strategies (M-Direct, M-CNN, M-Res, U-ADD, and U-CA) also benefit from increased refinement steps to some extent. However, their performance remains consistently below MMDiffuzzy, demonstrating the advantage of combining diffusion refinement with fuzzy memory-guided multimodal interaction.
 
 
 
