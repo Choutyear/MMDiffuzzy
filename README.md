@@ -137,6 +137,14 @@ Several important observations can be made:
 The calibration-related evaluation suggests that MMDiffuzzy produces more reliable probabilistic predictions than conventional multimodal fusion approaches. Specifically, the proposed fuzzy memory-guided diffusion framework achieves lower Expected Calibration Error (ECE) and Brier Score, indicating improved consistency between prediction confidence and empirical correctness. These results further support the uncertainty-aware property of the proposed framework.
 
 
+## Failure Case Visualization
+
+![Failure Case Visualization](https://github.com/Choutyear/MMDiffuzzy/blob/main/data/figcam.jpg)
+
+Representative CAM-like visualization from the BLCA multimodal classification task using the proposed MMDiffuzzy framework. Compared with relatively concentrated and stable activation patterns, failure-prone cases exhibit diffuse and ambiguous attention distributions with weaker structural focus on discriminative tumor regions. Such challenging cases are commonly associated with heterogeneous morphology, unclear tumor boundaries, or weak multimodal consistency, which increase the difficulty of reliable multimodal alignment and prediction.
+
+
+
 
 
 
