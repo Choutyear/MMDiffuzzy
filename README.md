@@ -127,5 +127,16 @@ Several important observations can be made:
    Traditional multimodal fusion strategies (M-Direct, M-CNN, M-Res, U-ADD, and U-CA) also benefit from increased refinement steps to some extent. However, their performance remains consistently below MMDiffuzzy, demonstrating the advantage of combining diffusion refinement with fuzzy memory-guided multimodal interaction.
 
 
+## Calibration Analysis on BLCA Multimodal Classification
+
+| Model      | ECE  | Brier Score  |
+|------------|------:|---------------:|
+| MC-Fusion  | 0.081 | 0.174          |
+| MMDiffuzzy | 0.056 | 0.142          |
+
+The calibration-related evaluation suggests that MMDiffuzzy produces more reliable probabilistic predictions than conventional multimodal fusion approaches. Specifically, the proposed fuzzy memory-guided diffusion framework achieves lower Expected Calibration Error (ECE) and Brier Score, indicating improved consistency between prediction confidence and empirical correctness. These results further support the uncertainty-aware property of the proposed framework.
+
+
+
 
 
