@@ -143,7 +143,19 @@ The calibration-related evaluation suggests that MMDiffuzzy produces more reliab
 
 Representative CAM-like visualization from the BLCA multimodal classification task using the proposed MMDiffuzzy framework. Compared with relatively concentrated and stable activation patterns, failure-prone cases exhibit diffuse and ambiguous attention distributions with weaker structural focus on discriminative tumor regions. Such challenging cases are commonly associated with heterogeneous morphology, unclear tumor boundaries, or weak multimodal consistency, which increase the difficulty of reliable multimodal alignment and prediction.
 
+## Table 4. Sensitivity analysis of diffusion steps and memory particle size.
 
+| Setting | Value | F1 (%) | C-index |
+|---|---:|---:|---:|
+| Diffusion steps \(T\) | 10  | 76.02 | 0.741 |
+|  | 20  | 82.47 | 0.785 |
+|  | 50  | 86.19 | 0.838 |
+|  | 100 | 87.75 | 0.844 |
+|  | 200 | 88.10 | 0.851 |
+| Memory particles \(K\) | 4  | 84.80 | 0.829 |
+|  | 8  | 86.52 | 0.839 |
+|  | 16 | 87.86 | 0.848 |
+|  | 32 | 87.39 | 0.847 |
 
 
 
