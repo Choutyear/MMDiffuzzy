@@ -1,0 +1,46 @@
+experiment
+  seed 2026
+  folds 5
+  split_ratio [0.70, 0.15, 0.15]
+  patient_level_split true
+
+data
+  patch_size 224
+  low_resolution_patch_size 224
+  wsi_encoder resnet50_imagenet
+  genomic_features
+    - copy_number_variation
+    - mutation_descriptors
+    - transcriptome_profile
+  color_normalization false
+  handcrafted_features false
+
+model
+  name MMDiffuzzy
+  latent_dim 256
+  diffusion_steps 100
+  memory_particles 16
+  fuzzy_membership
+    - bell
+    - s_curve
+  guidance fuzzy_memory_guidance
+  gated_memory_update true
+
+training
+  framework pytorch
+  optimizer adam
+  learning_rate 1.0e-4
+  weight_decay 1.0e-5
+  gpus 4
+  gpu_type NVIDIA_4090
+
+evaluation
+  classification_metrics [ACC, TPR, TNR, PPV, F1]
+  survival_metrics [c_index, log_rank_p_value]
+  statistical_test paired_wilcoxon_signed_rank
+  report_format mean_std_over_folds
+
+runtime
+  reported_inference_time_per_slide_seconds 82.4
+  reported_peak_gpu_memory_gb 11-13
+  dfmp_extra_memory_mb 200
